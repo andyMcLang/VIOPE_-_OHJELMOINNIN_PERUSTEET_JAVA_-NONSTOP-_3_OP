@@ -1,4 +1,6 @@
 /*
+Näytölle tulostaminen
+
 Tee toimiva Java-kielinen ohjelma, joka käynnistettäessä tulostaa monitorille lauseen "Terve vaan kaikille!"
 sekä rivinvaihdon huutomerkin jälkeen.
 
