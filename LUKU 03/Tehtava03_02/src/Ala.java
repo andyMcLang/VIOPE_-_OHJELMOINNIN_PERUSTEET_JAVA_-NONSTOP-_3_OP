@@ -1,4 +1,6 @@
 /*
+Ympyrän pinta-ala
+
 Tee ohjelma, joka kysyy käyttäjältä ympyrän säteen
 ja laskee annetun säteen perusteella ympyrän pinta-alan.
 Lopuksi pinta-ala tulostetaan näytölle.
