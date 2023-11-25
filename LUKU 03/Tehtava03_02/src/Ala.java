@@ -18,20 +18,23 @@ Anna ympyrän säde:3
 Ympyrän ala annetulla säteellä: 28.278
 */
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Ala {
     public static void main(String[] args) {
-        Scanner skanneri = new Scanner(System.in);
+        int sade;
+        double ala, pii = 3.142;
+        BufferedReader lukija = new BufferedReader(new InputStreamReader(System.in));
 
-        int ympyranSade;
-        double PI = 3.142;
-        double ympyranAla;
+        try {
 
-        System.out.print("Anna ympyrän säde:");
-        ympyranSade = skanneri.nextInt();
-        ympyranAla = ympyranSade*ympyranSade*PI;
-
-        System.out.println("Ympyrän ala annetulla säteellä: " + ympyranAla);
+            System.out.print("Anna ympyrän säde:");
+            sade = Integer.parseInt(lukija.readLine());
+            ala = pii * (sade * sade);
+            System.out.println("Ympyrän ala annetulla säteellä: " + ala);
+        } catch (Exception e) {
+            System.out.println("Virhe..");
+        }
     }
 }
+

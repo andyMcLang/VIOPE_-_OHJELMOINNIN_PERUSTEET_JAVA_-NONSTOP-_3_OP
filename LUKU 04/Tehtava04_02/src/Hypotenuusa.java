@@ -17,22 +17,27 @@ Anna toinen kateetti:33
 Hypotenuusan pituus: 54.20332093147061
  */
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 public class Hypotenuusa {
     public static void main(String[] args) {
-        Scanner skanneri = new Scanner(System.in);
-        int kateetti1;
-        int kateetti2;
-        double hypotenuusanPituus;
 
-        System.out.print("Anna ensimmäinen kateetti:");
-        kateetti1 = Integer.parseInt(skanneri.nextLine());
+        int a = 0, b = 0;
+        double c;
 
-        System.out.print("Anna toinen kateetti:");
-        kateetti2 = Integer.parseInt(skanneri.nextLine());
+        InputStreamReader input = new InputStreamReader(System.in);
+        BufferedReader lukija = new BufferedReader(input);
 
-        hypotenuusanPituus = Math.sqrt(Math.pow(kateetti1,2)+Math.pow(kateetti2,2));
-        System.out.println("Hypotenuusan pituus: "+hypotenuusanPituus);
+        try {
+            System.out.print("Anna ensimmäinen kateetti:");
+            a = Integer.parseInt(lukija.readLine());
+            System.out.print("Anna toinen kateetti:");
+            b = Integer.parseInt(lukija.readLine());
+        } catch (Exception e) {
+            System.out.println("Virhe: " + e);
+        }
+
+        System.out.println("Hypotenuusan pituus: " + Math.sqrt(a * a + b * b));
     }
 }

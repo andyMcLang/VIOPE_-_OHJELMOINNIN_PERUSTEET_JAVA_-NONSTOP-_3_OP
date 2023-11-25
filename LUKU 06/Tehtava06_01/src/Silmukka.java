@@ -27,19 +27,22 @@ Anna kokonaisluku:16
 16
  */
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Silmukka {
     public static void main(String[] args) {
-        Scanner skanneri = new Scanner(System.in);
 
-        int syote;
+        int i = 0;
+        BufferedReader lukija = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            System.out.print("Anna kokonaisluku:");
+            i = Integer.parseInt(lukija.readLine());
+        } catch (Exception e_) {
+            System.out.println("Virhe: " + e_);
+        }
 
-        System.out.print("Anna kokonaisluku:");
-        syote = skanneri.nextInt();
-
-        for (int i = 1; i <= syote;i++) {
-            System.out.println(i);
+        for (int x = 1; x <= i; x++) {
+            System.out.println(x);
         }
     }
 }

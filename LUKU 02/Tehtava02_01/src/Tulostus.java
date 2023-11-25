@@ -16,10 +16,8 @@ Esimerkkituloste:
 Terve vaan kaikille!
  */
 
-public class Tulostus
-{
-    public static void main (String [] args)
-    {
+public class Tulostus {
+    public static void main(String[] args) {
         System.out.println("Terve vaan kaikille!");
     }
 }

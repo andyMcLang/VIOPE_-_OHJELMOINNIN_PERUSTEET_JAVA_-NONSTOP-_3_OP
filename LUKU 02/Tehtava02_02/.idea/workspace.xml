@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fdc3595-cc24-4c3f-a153-56a7d13f3dbe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Lasku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_02/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_02/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_02/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_02/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_02/Tehtava08_02.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_02/matriisi.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_02/src/Matriisi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LUKU 01/Tehtava01_01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LUKU 01/Tehtava01_01/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LUKU 01/Tehtava01_01/src/EkaOhjelma.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../LUKU 01/Tehtava01_01/src/EkaOhjelma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tehtava02_01/src/Tulostus.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tehtava02_01/src/Tulostus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lasku.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lasku.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LUKU 07/Tehtava07_01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LUKU 07/Tehtava07_01/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_01/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../LUKU 08/Tehtava08_01/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Viope/OHJELMOINNIN PERUSTEET JAVA (NONSTOP) 3 OP",
+    "last_opened_file_path": "C:/Viope/OHJELMOINNIN PERUSTEET JAVA (NONSTOP) 3 OP/LUKU 02/Tehtava02_02",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,6 +68,7 @@
       <updated>1700132640649</updated>
       <workItem from="1700132641644" duration="3000" />
       <workItem from="1700132804690" duration="1163000" />
+      <workItem from="1700868279800" duration="49000" />
     </task>
     <servers />
   </component>

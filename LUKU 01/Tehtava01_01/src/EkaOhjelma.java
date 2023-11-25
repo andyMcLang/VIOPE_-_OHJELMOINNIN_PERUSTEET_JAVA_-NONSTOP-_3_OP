@@ -33,23 +33,17 @@ Luku oli: 78
 
 import java.io.*;
 
-public class EkaOhjelma
-{
-    public static void main (String [] args)
-    {
+public class EkaOhjelma {
+    public static void main(String[] args) {
         int luku;
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-        try
-        {
+        try {
             System.out.print("Anna kokonaisluku:");
             luku = Integer.parseInt(in.readLine());
 
             System.out.println("Luku oli: " + luku);
-        }
-
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("Syöttämäsi luku oli väärin.");
         }
 

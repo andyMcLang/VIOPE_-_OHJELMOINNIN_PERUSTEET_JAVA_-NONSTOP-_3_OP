@@ -13,22 +13,20 @@ Syötä jokin markkamäärä:679
 Markat euroina: 114.19960206736599
 */
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Euro {
     public static void main(String[] args) {
-        Scanner skanneri = new Scanner(System.in);
+        BufferedReader lukija = new BufferedReader(new InputStreamReader(System.in));
+        double markka, euro, muunnos = 5.94573;
 
-        double markkamaara;
-        double euromaara;
-        double euronKerroin = 5.94573;
-
-        System.out.print("Syötä jokin markkamäärä:");
-        markkamaara = skanneri.nextDouble();
-        euromaara = markkamaara/euronKerroin;
-
-        System.out.println("Markat euroina: " + euromaara);
-
-
+        try {
+            System.out.print("Syötä jokin markkamäärä:");
+            markka = Double.parseDouble(lukija.readLine());
+            euro = (markka / muunnos);
+            System.out.println("Markat euroina: " + euro);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 }

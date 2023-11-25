@@ -53,12 +53,9 @@ Syötä kolmas kokonaisluku: 411
 Syöttämistäsi luvuista suurin oli 555 ja pienin 33
  */
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class SuurinPienin {
-
-
     public static void main(String[] args) {
         int luku1, luku2, luku3, suurin, pienin;
         BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
@@ -82,23 +79,37 @@ public class SuurinPienin {
         }
     }
 
-    // Vastaus kenttä alkaa:
-    private static int pienin(int luku1, int luku2, int luku3) {
-        int pienin = luku1;
+    private static int pienin(int a, int b, int c) {
+        int palautus = 0;
 
-        if (luku2 < pienin) pienin = luku2;
-        if (luku3 < pienin) pienin = luku3;
+        if (a >= b) {
+            palautus = b;
+        } else {
+            palautus = a;
+        }
 
-        return pienin;
+        if (palautus >= c) {
+            palautus = c;
+        } else {
+            palautus = palautus;
+        }
+        return palautus;
     }
 
-    private static int suurin(int luku1, int luku2, int luku3) {
-        int suurin = luku1;
+    private static int suurin(int a, int b, int c) {
+        int palautus = 0;
+        if (a <= b) {
+            palautus = b;
+        } else {
+            palautus = a;
+        }
 
-        if (luku2 > suurin) suurin = luku2;
-        if (luku3 > suurin) suurin = luku3;
-
-        return suurin;
+        if (palautus <= c) {
+            palautus = c;
+        } else {
+            palautus = palautus;
+        }
+        return palautus;
     }
-    // Vastauskenttä loppuu.
+
 }

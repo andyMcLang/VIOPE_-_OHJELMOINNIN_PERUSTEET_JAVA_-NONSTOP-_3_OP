@@ -39,37 +39,39 @@ Syötetyt tunnit: 6.7 6.7 4.5 7.8 6.8 5.9 4.6 10.5 12.1 10.1 4.9 13.2 7.5 6.7 8.
  */
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Tunnit {
-    public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-
-
-        int paivia;
-        double tyotunnit;
-        double tyotunnitYhteensa = 0;
-
+    public static void main(String[] args) {
         System.out.println("Ohjelma laskee yhteen haluamasi ajanjakson aikana");
-        System.out.println("tehdyt työtunnit sekä keskimääräisen työpäivän pituuden.\n");
-        System.out.print("Kuinka monta päivää:");
-        paivia = Integer.parseInt(in.readLine());
+        System.out.print("tehdyt työtunnit sekä keskimääräisen työpäivän pituuden.\n\n");
+        double maara = 0;
+        double summa = 0;
+        double ka = 0;
+        double[] tunnit = new double[30];
+        BufferedReader lukija = new BufferedReader(new InputStreamReader(System.in));
 
-        double[] taulukko = new double[paivia];
+        try {
+            System.out.print("Kuinka monta päivää:");
+            maara = Double.parseDouble(lukija.readLine());
 
-        for (int i = 0; i < paivia; i++) {
-            System.out.print("Anna " + (i+1) +". päivän työtunnit:");
-            taulukko[i] = Double.parseDouble(in.readLine());
-            tyotunnitYhteensa += taulukko[i];
+            for (int i = 1; i <= maara; i++) {
+                System.out.print("Anna " + i + ". päivän työtunnit:");
+                tunnit[i - 1] = Double.parseDouble(lukija.readLine());
+                summa = summa + tunnit[i - 1];
+            }
+        } catch (Exception e) {
+            System.out.println("Virhe: " + e);
+            System.exit(0);
         }
 
-        System.out.println("Tehdyt työtunnit yhteensä: " + tyotunnitYhteensa);
-        System.out.println("Keskimääräinen työpäivän pituus: " + tyotunnitYhteensa /paivia);
-        System.out.print("Syötetyt tunnit: ");
-
-        for (double tunnit : taulukko) {
-            System.out.print(tunnit + " ");
+        ka = summa / maara;
+        System.out.println("\nTehdyt työtunnit yhteensä: " + summa);
+        System.out.println("Keskimääräinen työpäivän pituus: " + ka);
+        System.out.print("Syötetyt tunnit:");
+        for (int j = 1; j <= maara; j++) {
+            System.out.print(" " + tunnit[j - 1]);
         }
+        System.out.print("\n");
     }
 }

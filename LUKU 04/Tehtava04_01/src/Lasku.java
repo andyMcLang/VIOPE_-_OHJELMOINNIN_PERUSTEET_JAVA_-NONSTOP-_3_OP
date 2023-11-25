@@ -18,26 +18,27 @@ Syötä toinen kokonaisluku:
 Jakojäännös: 1
  */
 
-import java.util.Scanner;
+import java.io.*;
 
-class Lasku{
+public class Lasku {
+
     public static void main(String[] args) {
-        Scanner skanneri = new Scanner(System.in);
+        int a = 0, b = 0;
+        InputStreamReader input = new InputStreamReader(System.in);
+        BufferedReader lukija = new BufferedReader(input);
+        try {
+            System.out.print("Syötä ensimmäinen kokonaisluku:");
+            a = Integer.parseInt(lukija.readLine());
+            System.out.println("Syötä toinen kokonaisluku:");
+            b = Integer.parseInt(lukija.readLine());
+        } catch (Exception E) {
+            System.out.println("Virhe: " + E);
+        }
 
-        int luku1;
-        int luku2;
-
-        System.out.print("Syötä ensimmäinen kokonaisluku:");
-        luku1 = skanneri.nextInt();
-
-        System.out.println("Syötä toinen kokonaisluku:");
-        luku2 = skanneri.nextInt();
-
-        System.out.println(luku1+"+"+luku2+" = "+(luku1+luku2));
-        System.out.println(luku1+"-"+luku2+" = "+(luku1-luku2));
-        System.out.println(luku1+"*"+luku2+" = "+(luku1*luku2));
-        System.out.println(luku1+"/"+luku2+" = "+((double)luku1/(double)luku2));
-        System.out.printf("%d/%d = %f", luku1, luku2, (double)luku1/luku2);
-        System.out.println("Jakojäännös: "+(luku1%luku2));
+        System.out.println(a + "+" + b + " = " + (a + b));
+        System.out.println(a + "-" + b + " = " + (a - b));
+        System.out.println(a + "*" + b + " = " + (a * b));
+        System.out.println(a + "/" + b + " = " + ((double) a / b));
+        System.out.println("Jakojäännös: " + (a % b));
     }
 }

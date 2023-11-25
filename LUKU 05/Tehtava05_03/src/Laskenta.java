@@ -26,48 +26,53 @@ Anna toka luku:
 4354+432432 = 436786
  */
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Laskenta {
     public static void main(String[] args) {
-        Scanner skanneri = new Scanner(System.in);
+        int valinta = 0, a = 0, b = 0;
 
-        int valinta;
-        int luku1;
-        int luku2;
+        InputStream input_ = System.in;
+        InputStreamReader input = new InputStreamReader(input_);
+        BufferedReader lukija = new BufferedReader(input);
 
         System.out.println("Käytössäsi on seuraavat laskutoimitukset:");
         System.out.println("1: vähennyslasku");
         System.out.println("2: yhteenlasku");
         System.out.println("3: kertolasku");
         System.out.println("4: osamäärä");
-        System.out.println("5: jakojäännös\n");
+        System.out.println("5: jakojäännös");
+        System.out.println("\nValitse laskutoimitus:");
 
-        System.out.println("Valitse laskutoimitus:");
-        valinta = skanneri.nextInt();
-        System.out.print("Anna eka luku:");
-        luku1 = skanneri.nextInt();
-        System.out.println("Anna toka luku:");
-        luku2 = skanneri.nextInt();
-
+        try {
+            valinta = Integer.parseInt(lukija.readLine());
+            System.out.print("Anna eka luku:");
+            a = Integer.parseInt(lukija.readLine());
+            System.out.println("Anna toka luku:");
+            b = Integer.parseInt(lukija.readLine());
+        } catch (Exception e) {
+            System.out.print("Virhe: " + e);
+        }
         switch (valinta) {
             case 1:
-                System.out.println(luku1+"-"+luku2+" = "+(luku1-luku2));
+                System.out.print(a + "-" + b + " = " + (a - b));
                 break;
             case 2:
-                System.out.println(luku1+"+"+luku2+" = "+(luku1+luku2));
+                System.out.print(a + "+" + b + " = " + (a + b));
                 break;
             case 3:
-                System.out.println(luku1+"*"+luku2+" = "+(luku1*luku2));
+                System.out.print(a + "*" + b + " = " + (a * b));
                 break;
             case 4:
-                System.out.println(luku1+"/"+luku2+" = "+(luku1/luku2));
+                System.out.print(a + "/" + b + " = " + (a / b));
                 break;
             case 5:
-                System.out.println(luku1+"%"+luku2+" = "+(luku1%luku2));
+                System.out.print(a + "%" + b + " = " + (a % b));
                 break;
             default:
-                System.out.println("Ei onnistu!");
+                System.out.print("Ohjelmassa tapahtui virhe: valinnan pitää olla välillä 1-5.");
+                break;
         }
+        System.out.println("");
     }
 }

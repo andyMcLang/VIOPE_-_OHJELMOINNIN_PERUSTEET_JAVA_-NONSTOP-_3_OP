@@ -13,23 +13,22 @@ Anna kokonaisluku:9
 Luvun 9 kertoma on 362880
  */
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Kertoma {
     public static void main(String[] args) {
-        Scanner skanneri = new Scanner(System.in);
+        int a = 0, kertoma = 1;
+        BufferedReader lukija = new BufferedReader(new InputStreamReader(System.in));
 
-        int syote;
-
-        int kertoma = 1;
-
-        System.out.print("Anna kokonaisluku:");
-        syote = skanneri.nextInt();
-
-        for (int i = 1; i <= syote; i++) {
-            kertoma *= i;
+        try {
+            System.out.print("Anna kokonaisluku:");
+            a = Integer.parseInt(lukija.readLine());
+        } catch (Exception Ex) {
+            System.out.println("Virhe: " + Ex);
         }
-
-        System.out.println("Luvun "+ syote + " kertoma on "+kertoma);
+        for (int i = 1; i <= a; i++) {
+            kertoma = i * kertoma;
+        }
+        System.out.println("Luvun " + a + " kertoma on " + kertoma);
     }
 }

@@ -18,22 +18,25 @@ Anna toinen luku:42
 Antamiesi lukujen summa on 432474
 */
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Lasku {
-    public static void main(String[] args) {
-        int luku1;
-        int luku2;
-        int summa;
 
-        Scanner skanneri = new Scanner(System.in);
-        System.out.print("Anna ensimmäinen luku:");
-        luku1 = skanneri.nextInt();
+    public static void main(String args[]) {
+        int luku1, luku2, summa;
 
-        System.out.print("Anna toinen luku:");
-        luku2 = skanneri.nextInt();
+        BufferedReader lukija = new BufferedReader(new InputStreamReader(System.in));
+        try {
+            System.out.print("Anna ensimmäinen luku:");
+            luku1 = Integer.parseInt(lukija.readLine());
+            System.out.print("Anna toinen luku:");
+            luku2 = Integer.parseInt(lukija.readLine());
 
-        summa = luku1+luku2;
-        System.out.println("Antamiesi lukujen summa on " + summa);
+            summa = luku1 + luku2;
+            System.out.println("Antamiesi lukujen summa on " + summa);
+
+        } catch (Exception e) {
+            //
+        }
     }
 }

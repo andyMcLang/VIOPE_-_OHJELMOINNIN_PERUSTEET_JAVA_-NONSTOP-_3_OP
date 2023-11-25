@@ -16,21 +16,27 @@ Anna kokonaisluku: 322461
 Luku 322461 on pariton.
  */
 
-import java.util.Scanner;
+import java.io.*;
 
 public class Parillisuus {
     public static void main(String[] args) {
-        Scanner skanneri = new Scanner(System.in);
+        int a = 0;
 
-        int luku;
+        InputStreamReader input = new InputStreamReader(System.in);
+        BufferedReader lukija = new BufferedReader(input);
 
-        System.out.print("Anna kokonaisluku: ");
-        luku = skanneri.nextInt();
+        try {
+            System.out.print("Anna kokonaisluku: ");
+            a = Integer.parseInt(lukija.readLine());
 
-        if (luku % 2 == 0) {
-            System.out.println("Luku " + luku + " on parillinen.");
+        } catch (Exception e) {
+            System.out.println("Virhe: " + e);
+        }
+
+        if (a % 2 == 0) {
+            System.out.println("Luku " + a + " on parillinen.");
         } else {
-            System.out.println("Luku " + luku + " on pariton.");
+            System.out.println("Luku " + a + " on pariton.");
         }
     }
 }
